@@ -30,10 +30,11 @@ const dom = (function () {
     let data = libs.getFormData(e);
     pubsub.publish("citySearch", data.citySearch);
   });
+
   let renderCard = ({ name, weather, main, wind }) => {
-    console.log(main, wind);
+
     cityEl.innerText = name;
-    tempEl.innerText = [main.temp / 10];
+    tempEl.innerText = main.temp;
     windEl.innerText = wind.speed;
   };
 

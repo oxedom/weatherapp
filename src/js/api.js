@@ -1,4 +1,4 @@
-import { db } from "./db";
+
 
 export function apiController() {
   //Links and key
@@ -31,8 +31,8 @@ export function apiController() {
   let cityWeather = async (city) => {
     const cityData = await geoFetcher(city);
     const cityCords = { lat: cityData[0].lat, lon: cityData[0].lon };
-
     const weatherData = await weatherFetcher(cityCords);
+    console.log(weatherData);
     return weatherData;
   };
 
