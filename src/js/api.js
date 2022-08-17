@@ -1,4 +1,4 @@
-import { db } from "./db";
+
 
 export function apiController() {
   //Links and key
