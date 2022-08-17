@@ -10,20 +10,20 @@
   <div class="flex-wrapper">
     <header class="header"> 
       <nav>
-        <p>Weather App</p>
+        <h1>Weather App</h1>
       </nav>
 
     </header>
     <main class="main">
       <div class="searchForm">
-        <form id="form" action="submit">
-          <input type="text" name="citySearch" placeholder="Search a city ">
+        <form id="form" class="form-group" action="submit">
+          <input type="text" class="form-control mt-5" name="citySearch" placeholder="Search a city ">
         </form>
 
-        <div>
-          <p>City:<span id="city"></span></p>
-          <p>Temp:<span id="temp"></span></p>
-          <p>Wind: <span id="wind"></span></p>
+        <div class="card" style="width: 500px; height: auto">
+          <p>City:    <span id="city">  </span>  </p>
+          <p>Temp:    <span id="temp">  </span>  </p>
+          <p>Wind:    <span id="wind">  </span>  </p>
         </div>
     
 
@@ -32,7 +32,6 @@
   
     </main>
     <footer class="footer">
-      <span> hello</span>
     </footer>
 
 
