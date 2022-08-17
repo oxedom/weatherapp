@@ -1,8 +1,8 @@
 import { db } from "./db";
 
 export function apiController() {
-  //Links and keys
-  let apiKey = db.key;
+  //Links and key
+  let apiKey = "82dbf781a95c7b01a16d7fdaaf1b552c";
 
   let apiFetcher = async (link, key) => {
     try {

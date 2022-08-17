@@ -1,4 +1,4 @@
-import "./dom";
+import "./app";
 
 // apiController()
 //     .cityWeather("London")

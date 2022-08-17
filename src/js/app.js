@@ -19,7 +19,10 @@ const app = (function () {
 })();
 
 const dom = (function () {
-  let h1 = document.getElementById("h1");
+  let cityEl = document.getElementById("city");
+  let tempEl = document.getElementById("temp");
+  let windEl = document.getElementById("wind");
+
   let form = document.getElementById("form");
 
   form.addEventListener("submit", (e) => {
@@ -29,10 +32,10 @@ const dom = (function () {
   });
 
   let renderCard = ({ name, weather, main, wind }) => {
-    console.log(name);
-    console.log(weather);
-    console.log(main);
-    console.log(wind);
+    console.log(main, wind);
+    cityEl.innerText = name;
+    tempEl.innerText = [main.temp / 10];
+    windEl.innerText = wind.speed;
   };
 
   pubsub.subscribe("cityDataReturned", renderCard);
