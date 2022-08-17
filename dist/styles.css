@@ -6,7 +6,7 @@
 }
 
 .header {
-  background-color: green;
+  background-color: rgb(107, 180, 187);
 }
 
 .main {
@@ -14,15 +14,12 @@
   justify-content: center;
   justify-content: center;
   flex-grow: 1;
-  background-color: red;
+  background-color: rgb(61, 114, 128);
 }
 
-.footer {
-  background-color: blue;
-}
 
 .searchForm {
   flex-grow: 0;
+    
 
-  background-color: yellow;
 }
