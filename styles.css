@@ -1,0 +1,28 @@
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: green;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: red;
+}
+
+.footer {
+  background-color: blue;
+}
+
+.searchForm {
+  flex-grow: 0;
+
+  background-color: yellow;
+}
