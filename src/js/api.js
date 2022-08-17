@@ -17,41 +17,25 @@ export function apiController() {
   };
 
   let geoFetcher = async (city) => {
-    try {
-      console.log("GEO Fetcher has fired");
-      let geoApi = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=`;
-      return apiFetcher(geoApi, apiKey);
-    } catch (error) {
-      console.log(error);
-      return "ERROR";
-    }
+    console.log("GEO Fetcher has fired");
+    let geoApi = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=`;
+    return apiFetcher(geoApi, apiKey);
   };
 
   let weatherFetcher = async (cords) => {
-    try {
-      console.log("Weather Fetcher has fired");
-      let weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${cords.lat}&&lon=${cords.lon}&appid=`;
-      return apiFetcher(weatherApi, apiKey);
-    } catch (error) {
-      console.log(error);
-      return "ERROR";
-    }
+    console.log("Weather Fetcher has fired");
+    let weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${cords.lat}&&lon=${cords.lon}&appid=`;
+    return apiFetcher(weatherApi, apiKey);
   };
 
   let cityWeather = async (city) => {
-    try {
-      console.log("CityWeather has fired");
-      const cityData = await geoFetcher(city);
-      const cityCords = { lat: cityData[0].lat, lon: cityData[0].lon };
+    const cityData = await geoFetcher(city);
+    const cityCords = { lat: cityData[0].lat, lon: cityData[0].lon };
 
-      const weatherData = await weatherFetcher(cityCords);
-      console.log("data is:");
-      console.log(weatherData);
-      return weatherData;
-    } catch (error) {
-      console.log(error);
-      return "ERROR";
-    }
+    const weatherData = await weatherFetcher(cityCords);
+    console.log("data is:");
+    console.log(weatherData);
+    return weatherData;
   };
 
   return { cityWeather };
