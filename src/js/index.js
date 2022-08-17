@@ -1,3 +1,5 @@
 import { apiController } from "./api";
 
-apiController().cityWeather('London').then(data => console.log(data.name))
+apiController()
+  .cityWeather("London")
+  .then((data) => console.log(data.name));

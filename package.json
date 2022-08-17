@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "nice": "npx prettier --write ."
   },
   "repository": {
     "type": "git",
