@@ -33,8 +33,6 @@ export function apiController() {
     const cityCords = { lat: cityData[0].lat, lon: cityData[0].lon };
 
     const weatherData = await weatherFetcher(cityCords);
-    console.log("data is:");
-    console.log(weatherData);
     return weatherData;
   };
 
