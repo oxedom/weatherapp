@@ -34,7 +34,7 @@ const dom = (function () {
   let renderCard = ({ name, weather, main, wind }) => {
 
     cityEl.innerText = name;
-    tempEl.innerText = main.temp;
+    tempEl.innerText = main.temp / 10;
     windEl.innerText = wind.speed;
   };
 
