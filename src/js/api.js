@@ -18,7 +18,7 @@ export function apiController() {
 
   let geoFetcher = async (city) => {
     console.log("GEO Fetcher has fired");
-    let geoApi = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=`;
+    let geoApi = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=`;
     return apiFetcher(geoApi, apiKey);
   };
 
